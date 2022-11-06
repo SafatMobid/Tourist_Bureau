@@ -1,0 +1,37 @@
+.pgBackground
+{
+    background-color: black;
+}
+.headerLogo
+{
+    width: 270px;
+    height: 120px;
+    padding: 1rem;
+}
+
+.fontColor
+{
+    color: aliceblue;
+}
+
+.hr 
+{
+    color: azure;
+}
+
+.dropdown-menu
+{
+    background-color: black;
+}
+.dropdownmenuColor
+{
+    color: white;
+}
+
+.textColor
+{
+    color: white;
+    font-size: 300%;
+    font-weight: 20;
+    padding-left: 1rem;
+}

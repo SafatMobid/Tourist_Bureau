@@ -5,20 +5,129 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Janus Tourist</title>
-    <link href="styles/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles/index.css" rel="stylesheet">
   </head>
 
   <body>
+<div class="pgBackground">
 
     <header>
+        <div class="container-fluid"> <!-- Header image -->
+            <div class="row"> 
+              <img class="headerLogo" src="images/indexImages/Janus-Heading_transparent.png" alt="">
+              <p class="fontColor" style="font-size: 130%;">Janus Tourist Bureau helping you on your way</p>
+            </div>
+        </div>
 
+         <div> <!-- NavBar -->  
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-primary" >
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="nav navbar-nav mr-auto" style="align-items: center;">
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="activities.html">Activities</a>
+                                </li>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="nav-dropdown-user" data-bs-toggle="dropdown">Plan your stay</a>
+                                    <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                        <li><a class="dropdown-item dropdownmenuColor" href="...">Resort</a></li>
+                                        <li><a class="dropdown-item dropdownmenuColor" href="...">Hotel</a></li>
+                                        <li><a class="dropdown-item dropdownmenuColor" href="...">Motel</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Hiking</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">About us</a>
+                                </li>
+                            </ul>
+                            <form class="form" style="padding-left: 45em;">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                            <form style="padding-left:1em">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                    </div>
+                </nav>
+        </div>
     </header>
-
-    <main>
- 
-    </main>
+    <hr>
     
+    <main>
+        <div class="container-fluid"> <!-- Body Heading -->
+            <div class="col-md-10 col-lg-8">
+                <p class="textColor">Welcome to the Janus Tourist Bureau</p>
+                <p class="textColor" style="font-size:185%">We are a licensed bureau here to help for your visit to New York</p>
+                <p class="textColor" style="font-size:185%">Booming with diversity, culture, history and innovation, NYC radiates an energy that is best experienced in person. From a robust culinary scene to larger-than-life attractions, there's plenty to explore across the five boroughs. </p>
+                <hr style="color: white;">
+            </div>
+        </div>
+
+        <div class="container-fluid"> <!-- Entire card section -->
+            <div class="row"> <!-- Heading -->
+                <div class="col-12">
+                    <h1 class="textColor" style="font-size:500%">Plan your trip</h1>
+                </div>
+                <hr>
+            </div>
+
+            <div class="row card-deck"> <!-- Bootstrap card with option -->
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="images/indexImages/RestaurantImage.jpg" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Flavor of NYC</h3>
+                            <p class="card-text"> NYC's food scene is legendary. Whether you're looking for neighborhood eateries, global or diverse flavors enjoying a delicious meal in any part of the City is almost effortless. </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="..." class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="images/indexImages/metropolitanmuseumnyc.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Museum of NYC</h3>
+                            <p class="card-text">NYC is home to some of the most popular museum in the world. Whether you would like to look at world renowned art and sculpture's or take a walk through history.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="..." class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card bg-light">
+                        <img class="card-img-top" src="images/indexImages/ActivitiesNYC.jpg" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Activities in NYC</h3>
+                            <p class="card-text">You'll have a lot of fun in New York City. You will be able to see Plays, visit art exhibitions, attractions, and eat unparalleled meals at the world's best restaurants and many more.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="activities.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    
+    
+    
+    </main>
+</div>
     <script src="scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
