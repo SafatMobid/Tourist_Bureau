@@ -135,17 +135,37 @@ function activitiesListDropdown()
 function activitiesChange()
 {
     const currentChoice = document.getElementById("activitiesList").value;
-    const activityBox = document.getElementById("activitiesBox");
+    const activitiesBox = document.getElementById("activitiesBox");
 
     if (currentChoice == "Adventures")
     {
-        let category = activities.category;
-        let length = category.length
-        activityBox.length = 0
-        for(let i = 0; i < length; i++)
+        activitiesBox.length = 0
+        for(let i = 0; i < activities.length; i++)
         {
-            let makeOption = new Option(category[i]);
-            activityBox.appendChild(makeOption);
+            let aCategory = activities[i].category
+            let aId = activities[i].id
+            let aName = activities[i].name
+            let aDescription = activities[i].description
+            let aLocation = activities[i].location
+            let aPrice = number(activities[i].price).value
+            
+            if (currentChoice == aCategory)
+            {
+                let categories = activities.categories
+                let length = categories.length
+                
+                for (let i = 0; i < length; i++) 
+                {
+                let activitiesName = activities[i].category
+                
+                let option = document.createElement("option"); 
+                option.textContent = activitiesName;
+                option.value = activitiesName;
+                activitiesBox.appendChild(option);
+
+                }
+            }
         }
+        
     }
 }
