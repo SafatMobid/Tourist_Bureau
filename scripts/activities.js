@@ -100,3 +100,52 @@ let activities = [
         price: 0.00 
     }
 ];
+
+window.onload = function () 
+{
+    activitiesListDropdown();
+    const activitiesList = document.getElementById("activitiesList")
+    const activities = document.getElementById("activities")
+    activitiesList.onchange = activitiesChange;
+}
+
+function activitiesListDropdown()
+{
+    const activitiesList = document.getElementById("activitiesList")
+    let blankActivity = document.createElement("blankActivity");
+    blankActivity.value = "";
+    blankActivity.textContent = "--- Select A Category ---"
+    activitiesList.appendChild(blankActivity)
+ 
+    for (let i = 0; i < categories.length; i++) 
+    {
+    let activitiesName = categories[i]
+    
+    let option = document.createElement("option"); 
+    option.textContent = activitiesName;
+    option.value = activitiesName;
+    activitiesList.appendChild(option);
+
+    /*let option = new Option (activitiesName); 
+    activitiesList.appendChild(option); */ 
+    /* Another way of creating list */
+    }
+}
+
+function activitiesChange()
+{
+    const currentChoice = document.getElementById("activitiesList").value;
+    const activityBox = document.getElementById("activitiesBox");
+
+    if (currentChoice == "Adventures")
+    {
+        let category = activities.category;
+        let length = category.length
+        activityBox.length = 0
+        for(let i = 0; i < length; i++)
+        {
+            let makeOption = new Option(category[i]);
+            activityBox.appendChild(makeOption);
+        }
+    }
+}
