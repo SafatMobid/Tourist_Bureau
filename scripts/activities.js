@@ -105,16 +105,16 @@ window.onload = function ()
 {
     activitiesListDropdown();
     const activitiesList = document.getElementById("activitiesList")
-    const activities = document.getElementById("activities")
+    const activitiesBox = document.getElementById("activitiesBox")
     activitiesList.onchange = activitiesChange;
 }
 
 function activitiesListDropdown()
 {
     const activitiesList = document.getElementById("activitiesList")
-    let blankActivity = document.createElement("blankActivity");
+    let blankActivity = document.createElement("option");
     blankActivity.value = "";
-    blankActivity.textContent = "--- Select A Category ---"
+    blankActivity.textContent = "--- Select a Category ---"
     activitiesList.appendChild(blankActivity)
  
     for (let i = 0; i < categories.length; i++) 
@@ -137,7 +137,7 @@ function activitiesChange()
     const currentChoice = document.getElementById("activitiesList").value;
     const activitiesBox = document.getElementById("activitiesBox");
 
-    if (currentChoice == "Adventures")
+    if (currentChoice == "Adventures")  /* Get adventure choices */ 
     {
         activitiesBox.length = 0
         for(let i = 0; i < activities.length; i++)
@@ -147,23 +147,121 @@ function activitiesChange()
             let aName = activities[i].name
             let aDescription = activities[i].description
             let aLocation = activities[i].location
-            let aPrice = number(activities[i].price).value
+            let aPrice = activities[i].price
             
-            if (currentChoice == aCategory)
+            if (currentChoice == activities[i].category)
             {
-                let categories = activities.categories
-                let length = categories.length
-                
-                for (let i = 0; i < length; i++) 
-                {
-                let activitiesName = activities[i].category
                 
                 let option = document.createElement("option"); 
-                option.textContent = activitiesName;
-                option.value = activitiesName;
+                option.textContent = aName;
+                option.value = aName;
                 activitiesBox.appendChild(option);
 
-                }
+            
+            }
+        }
+        
+    }
+
+    if (currentChoice == "Arts & Crafts")  /* Get Arts & Crafts choices */ 
+    {
+        activitiesBox.length = 0
+        for(let i = 0; i < activities.length; i++)
+        {
+            let aCategory = activities[i].category
+            let aId = activities[i].id
+            let aName = activities[i].name
+            let aDescription = activities[i].description
+            let aLocation = activities[i].location
+            let aPrice = activities[i].price
+            
+            if (currentChoice == activities[i].category)
+            {
+                
+                let option = document.createElement("option"); 
+                option.textContent = aName;
+                option.value = aName;
+                activitiesBox.appendChild(option);
+
+            
+            }
+        }
+        
+    }
+
+    if (currentChoice == "Museums")  /* Get Museums choices */ 
+    {
+        activitiesBox.length = 0
+        for(let i = 0; i < activities.length; i++)
+        {
+            let aCategory = activities[i].category
+            let aId = activities[i].id
+            let aName = activities[i].name
+            let aDescription = activities[i].description
+            let aLocation = activities[i].location
+            let aPrice = activities[i].price
+            
+            if (currentChoice == activities[i].category)
+            {
+                
+                let option = document.createElement("option"); 
+                option.textContent = aName;
+                option.value = aName;
+                activitiesBox.appendChild(option);
+
+            
+            }
+        }
+        
+    }
+
+    if (currentChoice == "Wine Tastings")  /* Get Wine Tastings choices */ 
+    {
+        activitiesBox.length = 0
+        for(let i = 0; i < activities.length; i++)
+        {
+            let aCategory = activities[i].category
+            let aId = activities[i].id
+            let aName = activities[i].name
+            let aDescription = activities[i].description
+            let aLocation = activities[i].location
+            let aPrice = activities[i].price
+            
+            if (currentChoice == activities[i].category)
+            {
+                
+                let option = document.createElement("option"); 
+                option.textContent = aName;
+                option.value = aName;
+                activitiesBox.appendChild(option);
+
+            
+            }
+        }
+        
+    }
+
+    if (currentChoice == "Other")  /* Get Other choices */ 
+    {
+        activitiesBox.length = 0
+        for(let i = 0; i < activities.length; i++)
+        {
+            let aCategory = activities[i].category
+            let aId = activities[i].id
+            let aName = activities[i].name
+            let aDescription = activities[i].description
+            let aLocation = activities[i].location
+            let aPrice = activities[i].price
+            
+            if (currentChoice == activities[i].category)
+            {
+                
+                let option = document.createElement("option"); 
+                option.textContent = aName;
+                option.value = aName;
+                activitiesBox.appendChild(option);
+
+            
             }
         }
         
