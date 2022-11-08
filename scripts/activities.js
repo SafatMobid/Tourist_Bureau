@@ -106,7 +106,9 @@ window.onload = function ()
     activitiesListDropdown();
     const activitiesList = document.getElementById("activitiesList")
     const activitiesBox = document.getElementById("activitiesBox")
+    const activitiesDetails = document.getElementById("activitiesDetails")
     activitiesList.onchange = activitiesChange;
+    activitiesBox.onchange = activitiesBoxChange;
 }
 
 function activitiesListDropdown()
@@ -132,7 +134,7 @@ function activitiesListDropdown()
     }
 }
 
-function activitiesChange()
+function activitiesChange() /* Creates secondary dropdown that ties with selection from first */
 {
     const currentChoice = document.getElementById("activitiesList").value;
     const activitiesBox = document.getElementById("activitiesBox");
@@ -266,4 +268,30 @@ function activitiesChange()
         }
         
     }
+}
+
+function activitiesBoxChange()
+{
+    //const activitiesBoxValue = document.getElementById("activitiesBox");
+    //second dropdown option disappear if active and try to use
+    for(let i = 0; i < activities.length; i++)
+    {
+        let aCategory = activities[i].category
+        let aId = activities[i].id
+        let aName = activities[i].name
+        let aDescription = activities[i].description
+        let aLocation = activities[i].location
+        let aPrice = activities[i].price
+        
+    //if (activitiesBoxValue.value = aName)
+    //Original Code (may need more testing)
+    //Can't be active
+    if (activitiesBoxChange.value = aName) 
+    {
+        activitiesDetails.innerHTML = aName + "this is a test"
+        //Only displaying last option i.e "Other" in activities
+    }
+
+    }    
+
 }
